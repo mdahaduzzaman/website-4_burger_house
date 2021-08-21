@@ -1,0 +1,462 @@
+/* fonts start here  */
+@font-face {
+    font-family: LibreBaskerville-Bold;
+    src: url('../fonts/LibreBaskerville-Bold.ttf');
+}
+@font-face {
+    font-family: Roboto-Bold;
+    src: url('../fonts/Roboto-Bold.ttf');
+}
+@font-face {
+    font-family: Roboto-Medium;
+    src: url('../fonts/Roboto-Medium.ttf');
+}
+@font-face {
+    font-family: Roboto-Regular;
+    src: url('../fonts/Roboto-Regular.ttf');
+}
+@font-face {
+    font-family: Roboto-light;
+    src: url('../fonts/Roboto-Light.ttf');
+}
+/* fonts close here  */
+:root{
+    --primary: #ffc657;
+    --secondary: #3d2514;
+    --danger: #bf2222;
+    --pure: #ffffff;
+}
+/* universal style  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Roboto-Regular;
+}
+/* REUSEABLE CLASS START HERE  */
+.flex{
+    display: flex;
+}
+.grid{
+    display: grid;
+}
+.justify-center{
+    justify-content: center;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.justify-end{
+    justify-content: flex-end;
+}
+.align-center{
+    align-items: center;
+}
+.direction-column{
+    flex-direction: column;
+}
+.flex-1{
+    flex: 1;
+}
+
+/* REUSEABLE CLASS CLOSE HERE  */
+
+/* HEADER SECTION START HERE  */
+header{
+    background-color: var(--primary);
+    text-transform: uppercase;
+    height: 850px;
+}
+header .child-wrapper:first-child div{
+    margin-top: 1rem;
+}
+header .main-wrapper .child-wrapper .delivery{
+    margin-bottom: 2rem;
+}
+header .main-wrapper .child-wrapper .logo  img{
+    width: 15rem;
+    margin-left: 2.5rem;
+}
+header .main-wrapper .child-wrapper .navbar{
+    margin-right: 4rem;
+    font-family: Roboto-Bold;
+    font-size: 1.2rem;
+}
+header .main-wrapper .child-wrapper .navbar img{
+    width: 3rem;
+    margin-right: .75rem;
+}
+header .main-wrapper .child-wrapper .navbar .menu ul li{
+    list-style-type: none;
+    margin: .3rem;
+}
+header .main-wrapper .child-wrapper .navbar .menu ul li:first-child a{
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+header .main-wrapper .child-wrapper .navbar .menu ul li:last-child a{
+    padding-right: 0;
+}
+header .main-wrapper .child-wrapper .navbar ul li a{
+    color: var(--secondary);
+    text-decoration: none;
+    font-family: Roboto-Bold;
+    font-size: 20px;
+    padding: 14px 19px;
+    border-radius: 4px;
+    transition: all .5s ease;
+    text-shadow: 1px 1px 4px white;
+    letter-spacing: 4px;
+}
+header .main-wrapper .child-wrapper .navbar ul li a:hover{
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+header .main-wrapper .child-wrapper:last-child div:first-child{
+    margin-left: 3rem;
+}
+header .main-wrapper .child-wrapper:last-child div .border{
+    border: 3px dashed var(--secondary);
+    width: 64.9%;
+    padding: .5rem .8rem;
+    margin-left: 12px;
+    font-size: 16px;
+}
+header .main-wrapper .child-wrapper:last-child div:first-child{
+    margin-top: 80px;
+}
+header .main-wrapper .child-wrapper:last-child div .burger{
+    font-family: LibreBaskerville-Bold;
+    font-size: 7rem;
+    color: var(--secondary);
+    text-shadow: 8px 3px 12px var(--pure)
+}
+header .main-wrapper .child-wrapper:last-child div .week{
+    font-family: LibreBaskerville-Bold;
+    font-size: 3.8rem;
+    color: var(--secondary);
+    text-shadow: 6px 0px 10px var(--pure);
+}
+header .main-wrapper .child-wrapper .main-burger{
+    position: relative;
+    top: 95px;
+    right: 20px;
+}
+header .main-wrapper .child-wrapper .main-burger .red-circle{
+    background-color: var(--danger);
+    height: 40%;
+    width: 40%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-color: var(--danger);
+    height: 40%;
+    width: 40%;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 10px;
+    left: -130px;
+    color: var(--pure);
+}
+header .main-wrapper .child-wrapper .main-burger .transparent{
+    border: 6px dashed rgb(255 255 255);
+    height: 35%;
+    width: 35%;
+    border-radius: 50%;
+    position: absolute;
+    left: -110px;
+    bottom: 24px;
+}
+header .main-wrapper .child-wrapper .main-burger .red-circle{
+    font-size: 31px;
+    letter-spacing: 9px;
+    text-align: center;
+}
+header .main-wrapper .child-wrapper .main-burger .red-circle strong{
+    font-size: 80px;
+}
+/* HEADER SECTION CLOSE HERE  */
+/* GALLERY SECTION START HERE  */
+section.gallery{
+    height: 500px;
+    padding: 4rem 4rem;
+}
+section.gallery .wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    height: 100%;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 2.5rem 3rem;
+    margin-right: 3rem;
+}
+section.gallery .wrapper div{
+    border-radius: .5rem;
+    color: white;
+    padding: 1.5rem;
+    text-transform: uppercase;
+}
+section.gallery .wrapper div h2{
+    font-size: 2rem;
+}
+section.gallery .wrapper div h4{
+    font-size: 1rem;
+}
+section.gallery .wrapper div.first{
+    background-image: url('../images/most-popular-burger.jpg.png');
+    background-repeat: no-repeat;
+    grid-row: 1 / -1;
+    background-size: cover;
+    
+}
+section.gallery .wrapper div.second{
+    background-image: url('../images/fun-burger.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section.gallery .wrapper div.third{
+    background-image: url('../images/fresh-burger.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* GALLERY SECTION CLOSE HERE  */
+/* TASTY_BURGER SECTION START HERE  */
+section.tasty-burger{
+    text-transform: uppercase;
+}
+section.tasty-burger > button{
+    text-transform: uppercase;
+    padding: .5rem 1rem;
+    background-color: orange;
+    color: var(--secondary);
+    font-family: Roboto-Bold;
+    font-size: 1rem;
+    display: block;
+    border: none;
+    margin: 0 auto;
+}
+section.tasty-burger h1{
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 3rem;
+    text-align: center;
+    color: var(--secondary);
+    margin: 2rem 0;
+    letter-spacing: 2px;
+}
+section.tasty-burger > p{
+    text-align: center;
+    color: var(--danger);
+    margin: 0 auto;
+    width: 70%;
+    font-size: .8rem;
+    text-transform: initial;
+    line-height: 1.5;
+}
+section.tasty-burger .wrapper{
+    display: flex;
+    width: 95%;
+    margin: 3rem auto;
+    justify-content: center;
+    align-items: center;
+}
+section.tasty-burger .wrapper .item{
+    flex: 1;
+    text-align: center;
+
+}
+section.tasty-burger .wrapper .item .image{
+    position: relative;
+}
+section.tasty-burger .wrapper .item .image img:first-child{
+    width: 60%;
+    margin-bottom: 2rem;
+}
+section.tasty-burger .wrapper .item .image img:last-child{
+    position: absolute;
+    width: 100%;
+    left: 24px;
+    bottom: 0;
+    width: 85%;
+}
+section.tasty-burger .wrapper .item h2{
+    color: var(--secondary);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+section.tasty-burger .wrapper .item p{
+    color: var(--danger);
+    text-align: center;
+    font-size: .8rem;
+    width: 75%;
+    margin: 0 auto;
+    text-transform: initial;
+}
+
+section.tasty-burger .wrapper .item button{
+    padding: .5rem 1.5rem;
+    background-color: var(--danger);
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-family: Roboto-Bold;
+}
+/* TASTY_BURGER SECTION CLOSE HERE  */
+/* UPCOMING-EVENT SECTION START HERE  */
+section.event{
+    padding: 0 3rem;
+}
+section.event .wrapper{
+    display: flex;
+    height: 400px;
+    padding: 1rem;
+    box-shadow: 9px 12px 31px rgb(0 0 0 / 10%)
+}
+section.event .wrapper .item{
+    flex: 1;
+}
+section.event .wrapper .item > img{
+    width: 100%;
+}
+section.event .wrapper .item h4{
+    color: var(--secondary);
+    line-height: .6;
+}
+section.event .wrapper .item h2{
+    color: var(--secondary);
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 2.4rem;
+}
+section.event .wrapper .item:first-child{
+    padding-left: 2rem;
+    padding-top: 1.5rem;
+}
+section.event .wrapper .item p{
+    color: var(--secondary);
+    font-family: Roboto-Light;
+    width: 95%;
+    margin-top: 1.5rem;
+    text-transform: initial;
+}
+section.event .wrapper .item .images{
+    margin-top: 7rem;
+}
+section.event .wrapper .item .images .unfilled{
+    background-color: #80808040;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    display: inline-block;
+}
+/* UPCOMING-EVENT SECTION CLOSE HERE  */
+/* RESERVATION SECTION START HERE  */
+section.reserve{
+    position: relative;
+    height: 600px;
+}
+section.reserve img:first-child{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+section.reserve h4{
+    color: var(--secondary);
+    text-align: center;
+    padding-top: 6rem;
+    letter-spacing: 2px;
+}
+section.reserve h2{
+    color: var(--secondary);
+    text-align: center;
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 2.4rem;
+    margin-top: .5rem;
+}
+section.reserve img.sauce{
+    position: absolute;
+    top: 186px;
+    left: 170px;
+    width: 16%;
+}
+section.reserve img:last-child{
+    position: absolute;
+    right: 0;
+    width: 261px;
+    bottom: -100px;
+}
+section.reserve form{
+    display: grid;
+    grid-template-columns: repeat(2, 270px);
+    justify-content: center;
+    grid-gap: 1rem;
+    margin-top: 4rem;
+}
+section.reserve form input{
+    padding: 1rem;
+    font-family: Roboto-Bold;
+    border: 1px solid #80808063;
+    border-radius: 4px;
+}
+section.reserve form input[type="submit"]{
+    background-color: var(--danger);
+    font-family: 'Alfa Slab One', cursive;
+    color: white;
+    border: none;
+}
+/* RESERVATION SECTION CLOSE HERE  */
+/* FOOTER SECTION START HERE  */
+footer{
+    background-image: url(../images/burger-background.png);
+    height: 500px;
+    color: white;
+    width: 95%;
+    margin: 0 auto;
+    padding: 3rem;
+    position: relative;
+    margin-bottom: 3rem;
+}
+footer .logo img{
+    filter: brightness(100);
+    margin-top: 1rem;
+    width: 30%;
+    margin-bottom: 2rem;
+}
+footer p{
+    width: 40%;
+    filter: invert(24%);
+    line-height: 1.4;
+}
+footer .address{
+    position: absolute;
+    right: 110px;
+}
+footer .address div{
+    margin-bottom: 1rem;
+}
+footer .address div img{
+    width: 20px;
+    position: relative;
+    top: 5px;
+    margin-right: 1.5rem;
+}
+footer .address div span{
+    letter-spacing: -1px;
+    font-family: Roboto-Medium;
+}
+footer .wrapper{
+    display: flex;
+    margin-top: 12rem;
+    justify-content: space-between;
+}
+footer .wrapper .copyright{
+    letter-spacing: -1px;
+    font-family: Roboto-Medium;
+    filter: contrast(0.5);
+}
+footer .wrapper .icons img{
+    margin-right: .3rem;
+    width: 1.5rem;
+}
+/* FOOTER SECTION CLOSE HERE  */
